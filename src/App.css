@@ -1,8 +1,4 @@
-/* body {
-  background: url(/img/main.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+
 body{
   background: url('/img/main.jpg')no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -38,7 +34,7 @@ body{
 }
 
 .App-link {
-  color: #61dafb;
+  color: black;
 }
 
 @keyframes App-logo-spin {
