@@ -6,12 +6,15 @@ function Card() {
     <div className="card">
       <div className="card-body">
         <p className="card-text">
-          Aliquip dolore commodo nostrud minim. Cillum do enim non ullamco. Commodo magna eu ex
-          mollit sunt amet fugiat. In irure eu enim id ea sit nostrud incididunt ad
-          adipisicing.Aliquip dolore commodo nostrud minim. Cillum do enim non ullamco. Commodo
-          magna eu ex mollit sunt amet fugiat. In irure eu enim id ea sit nostrud incididunt ad
-          adipisicing.
         </p>
+       <div>
+<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"/></a>
+<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"/></a>
+<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"/></a>
+<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"/></a>
+       </div> 
+
+
       </div>
     </div>
   );
