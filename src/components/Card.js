@@ -3,20 +3,17 @@ import React from "react";
 
 function Card() {
   return (
-    <div className="card">
-      <div className="card-body">
-        <p className="card-text">
-        </p>
+    <div className="card bg-transparent ">
+   
        <div>
-<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"/></a>
-<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"/></a>
-<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"/></a>
-<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"/></a>
+<br></br><br></br><br></br><br></br><br></br><br></br>
+<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150" class="img-thumbnail"/></a>
+<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150" class="img-thumbnail"/></a>
+<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"class="img-thumbnail"/></a>
+<a href='https://placeholder.com/'><img src="https://via.placeholder.com/150"class="img-thumbnail"/></a>
        </div> 
 
-
-      </div>
-    </div>
+     </div>
   );
 }
 
