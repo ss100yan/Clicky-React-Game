@@ -1,4 +1,22 @@
-/* .App {
+/* body {
+  background: url(/img/main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+body{
+  background: url('/img/main.jpg')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* background-size: 1200px; */
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.App {
   text-align: center;
 }
 
@@ -30,4 +48,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}

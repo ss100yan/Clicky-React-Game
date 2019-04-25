@@ -1,15 +1,14 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Jumbotron from "./components/Jumbotron";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
+import './App.css';
 
 function App() {
   return (
     <div className="container">
       <Navbar />
-      <Jumbotron />
-      <Card />
+           <Card />
       <Footer />
     </div>
   );
