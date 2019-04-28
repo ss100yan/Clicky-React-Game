@@ -1,8 +1,5 @@
 import React from "react";
 
-
-
-
 const shuffleArray = arr => (
     arr
       .map(a => [Math.random(), a])
@@ -57,14 +54,16 @@ const initialChars = [
 const CharacterBox = (props) => {
     return(
         <div className="character-box">
-            {props.characters.map( (character, index) => <Character character={character} index={index} onCharacterClick={props.onCharacterClick} key={character.name} />)}
+            {props.characters.map( (character, index) =>
+                 <Character character={character} index={index} onCharacterClick={props.onCharacterClick} />)}
         </div>
     )
 };
 
 
 
-export const ScoreDisplay = (props) => (<div className="score-keeper">Score: {props.score}</div>);
+
+const ScoreDisplay = (props) => (<div className="score-keeper">Score: {props.score}</div>);
 
 class Character extends React.Component{
 

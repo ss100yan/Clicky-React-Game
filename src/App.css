@@ -57,6 +57,11 @@ body{
   transform: scale(1.03,1.03);
 }
 
+.score-keeper{
+
+  font-size: 50px;
+  font-weight: bold;
+}
 
 @keyframes App-logo-spin {
   from {
