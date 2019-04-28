@@ -1,8 +1,5 @@
-import React, { Component } from 'react';
+import React from "react";
 
-// import FadeIn from '../transitions/fade-in';
-// import CharacterBox from './characterBox';
-// import ScoreDisplay from './scoredisplay';
 
 
 
@@ -15,56 +12,46 @@ const shuffleArray = arr => (
 
 const initialChars = [
     {
-        name: 'Allen Iverson',
-        img: 'img/250x180/allen-iverson.png',
+       
+        img: 'img/1.jpg',
         clicked: false
     },
     {
-        name: 'Blake Griffin',
-        img: 'img/250x180/blake-griffin.png',
+       
+        img: 'img/2.jpg',
         clicked: false
     },
     {
-        name: 'Carmelo Anthony',
-        img: 'img/250x180/carmelo-anthony.png',
+       
+        img: 'img/3.jpg',
         clicked: false
     },
     {
-        name: 'Colby Bryant',
-        img: 'img/250x180/colby-bryant.png',
+        
+        img: 'img/4.jpg',
         clicked: false
     },
     {
-        name: 'Demar Derozan',
-        img: 'img/250x180/demar-derozan.png',
+        
+        img: 'img/5.jpg',
         clicked: false
     },
     {
-        name: 'Derrick Rose',
-        img: 'img/250x180/derrick-rose.png',
+       
+        img: 'img/6.jpg',
         clicked: false
     },
     {
-        name: 'Devin Booker',
-        img: 'img/250x180/devin-booker.png',
+       
+        img: 'img/7.jpg',
         clicked: false
     },
     {
-        name: 'Draymond Green',
-        img: 'img/250x180/draymond-green.png',
+       
+        img: 'img/8.jpg',
         clicked: false
     },
-    {
-        name: 'James Harden',
-        img: 'img/250x180/james-harden.png',
-        clicked: false
-    },
-    {
-        name: 'Jeremy Lin',
-        img: 'img/250x180/jeremy-lin.png',
-        clicked: false
-    },
-  
+   
 ]
 
 const CharacterBox = (props) => {
@@ -79,7 +66,7 @@ const CharacterBox = (props) => {
 
 export const ScoreDisplay = (props) => (<div className="score-keeper">Score: {props.score}</div>);
 
-class Character extends Component {
+class Character extends React.Component{
 
     handleClick = () => {
         this.props.onCharacterClick(this.props.index);
@@ -99,19 +86,16 @@ class Character extends Component {
     }
 }
 
-export default class Board extends Component {
+export default class Board extends React.Component {
 
-    constructor(props){
-        super(props);
-
-        this.state = {
+   
+        state = {
             user: {
                 score: 0 
             },
             characters: shuffleArray( initialChars )
         };
-    }
-
+ 
 
 
 
@@ -149,8 +133,7 @@ export default class Board extends Component {
         return (
             <div className="Board">
               
-                <ScoreDisplay
-                        score={this.state.user.score} />
+                <ScoreDisplay score={this.state.user.score} />
                 <CharacterBox 
                     characters={this.state.characters} 
                     onCharacterClick={this.onCharacterClick} />
