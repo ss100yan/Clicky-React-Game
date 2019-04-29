@@ -1,11 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
-const shuffleArray = arr => (
-    arr
-      .map(a => [Math.random(), a])
-      .sort((a, b) => a[0] - b[0])
-      .map(a => a[1]) 
-);
+
+
+const shuffleArray = arr => (arr.map(a => [Math.random(), a]));
 
 const initialChars = [
     {    img: 'img/1.jpg',
@@ -94,7 +91,7 @@ export default class Board extends React.Component {
             this.setState({
                 characters: shuffleArray(this.state.characters.map( character => { return { ...character, clicked : false } })),
                 user: {
-                   
+                    
                     score: 0
                 }
             });
