@@ -1,16 +1,19 @@
 import React from "react";
 
-function Navbar() {
+class Navbar extends React.Component {
+
+render(){
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       
-        Soccer Game
-      
+       Soccer Game
+
+      Score: {this.props.score}
     
 
      
     </nav>
-  );
+  );}
 }
 
 export default Navbar;

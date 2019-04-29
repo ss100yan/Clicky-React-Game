@@ -1,13 +1,13 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Board from "./components/board/board";
+
+import Board from "./components/board";
 import Footer from "./components/Footer";
 import './App.css';
 
 function App() {
   return (
     <div className="container">
-      <Navbar />
+      {/* <Navbar /> */}
       <Board />
       <Footer />
     </div>

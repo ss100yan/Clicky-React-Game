@@ -1,5 +1,5 @@
 import React from "react";
-
+import Navbar from "./Navbar";
 const shuffleArray = arr => (
     arr
       .map(a => [Math.random(), a])
@@ -47,7 +47,7 @@ const CharacterBox = (props) => {
 
 
 
-const ScoreDisplay = (props) => (<div className="score-keeper">Score: {props.score}</div>);
+
 
 class Character extends React.Component{
 
@@ -109,9 +109,9 @@ export default class Board extends React.Component {
     
     render(){
         return (
-
+                  
             <div className="Board">
-                 <ScoreDisplay score={this.state.user.score} />
+                 <Navbar   score={this.state.user.score}   />
                 <CharacterBox 
                     characters={this.state.characters} 
                     onCharacterClick={this.onCharacterClick} />
