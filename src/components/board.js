@@ -2,7 +2,13 @@ import React from "react";
 import Navbar from "./Navbar";
 
 
-const shuffleArray = arr => (arr.map(a => [Math.random(), a]));
+const mapSortMap = (arr) => {
+    return (
+    arr
+      .map(a => [Math.random(), a])
+      .sort((a, b) => a[0] - b[0])
+      .map(a => a[1]) 
+)};
 
 const initialChars = [
     {    img: 'img/1.jpg',
@@ -71,14 +77,14 @@ export default class Board extends React.Component {
    
         state = {
                   user: { score: 0 },
-                  characters: shuffleArray( initialChars )
+                  characters: mapSortMap( initialChars )
                 }; 
 
     
     onCharacterClick = ( index ) =>{
         if( !this.state.characters[index].clicked ){
             this.setState({
-                characters: shuffleArray( this.state.characters.map( (character, current) =>  {
+                characters: mapSortMap( this.state.characters.map( (character, current) =>  {
                     return ( current === index ) ? { ...character, clicked:true } : character
                 })),
                 user: {
@@ -89,7 +95,7 @@ export default class Board extends React.Component {
            
         } else {
             this.setState({
-                characters: shuffleArray(this.state.characters.map( character => { return { ...character, clicked : false } })),
+                characters: mapSortMap(this.state.characters.map( character => { return { ...character, clicked : false } })),
                 user: {
                     
                     score: 0
