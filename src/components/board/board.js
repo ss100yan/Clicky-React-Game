@@ -8,44 +8,28 @@ const shuffleArray = arr => (
 );
 
 const initialChars = [
-    {
-       
-        img: 'img/1.jpg',
+    {    img: 'img/1.jpg',
         clicked: false
     },
-    {
-       
-        img: 'img/2.jpg',
+    {   img: 'img/2.jpg',
         clicked: false
     },
-    {
-       
-        img: 'img/3.jpg',
+    {  img: 'img/3.jpg',
+       clicked: false
+    },
+    {   img: 'img/4.jpg',
         clicked: false
     },
-    {
-        
-        img: 'img/4.jpg',
+    {   img: 'img/5.jpg',
         clicked: false
     },
-    {
-        
-        img: 'img/5.jpg',
+    {   img: 'img/6.jpg',
         clicked: false
     },
-    {
-       
-        img: 'img/6.jpg',
+    {   img: 'img/7.jpg',
         clicked: false
     },
-    {
-       
-        img: 'img/7.jpg',
-        clicked: false
-    },
-    {
-       
-        img: 'img/8.jpg',
+    {   img: 'img/8.jpg',
         clicked: false
     },
    
@@ -89,14 +73,9 @@ export default class Board extends React.Component {
 
    
         state = {
-            user: {
-                score: 0 
-            },
-            characters: shuffleArray( initialChars )
-        };
- 
-
-
+                  user: { score: 0 },
+                  characters: shuffleArray( initialChars )
+                }; 
 
     
     onCharacterClick = ( index ) =>{
@@ -106,20 +85,20 @@ export default class Board extends React.Component {
                     return ( current === index ) ? { ...character, clicked:true } : character
                 })),
                 user: {
-                    ...this.state.user,
+                    
                     score: this.state.user.score + 1
                 }
             });
-            //and shuffle
+           
         } else {
             this.setState({
                 characters: shuffleArray(this.state.characters.map( character => { return { ...character, clicked : false } })),
                 user: {
-                    ...this.state.user,
+                   
                     score: 0
                 }
             });
-            //and shuffle
+           
         }
         
     }
@@ -130,9 +109,9 @@ export default class Board extends React.Component {
     
     render(){
         return (
+
             <div className="Board">
-              
-                <ScoreDisplay score={this.state.user.score} />
+                 <ScoreDisplay score={this.state.user.score} />
                 <CharacterBox 
                     characters={this.state.characters} 
                     onCharacterClick={this.onCharacterClick} />

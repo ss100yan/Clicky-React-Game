@@ -6,17 +6,15 @@
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0",
-    },
+    "react-scripts": "3.0.0"
+  },
   "scripts": {
-    
-   
     "start": "react-scripts start",
     "predeploy": "yarn run build",
-   "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "homepage": "https://ss100yan.github.io/Clicky-React-Game/",
+    "homepage": "https://ss100yan.github.io/Clicky-React-Game",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
