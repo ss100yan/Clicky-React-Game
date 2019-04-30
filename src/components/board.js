@@ -10,7 +10,7 @@ const mapSortMap = (arr) => {
       .map(a => a[1]) 
 )};
 
-const initialChars = [
+const initialSoccerPlayers = [
     {    img: 'img/1.jpg',
         clicked: false
     },
@@ -38,24 +38,13 @@ const initialChars = [
    
 ]
 
-const CharacterBox = (props) => {
-    return(
-        <div className="character-box">
-            {props.characters.map( (character, index) =>
-                 <Character character={character} index={index} onCharacterClick={props.onCharacterClick} />)}
-        </div>
-    )
-};
 
+//Each Soccer Player component
 
-
-
-
-
-class Character extends React.Component{
+class SoccerPlayer extends React.Component{
 
     handleClick = () => {
-        this.props.onCharacterClick(this.props.index);
+        this.props.onPlayerClick(this.props.index);
     }
 
     render(){ return(
@@ -72,16 +61,34 @@ class Character extends React.Component{
     }
 }
 
+// Card with all Soccer Players Component
+
+const SoccerPlayersCard = (props) => {
+    return(
+        <div className="SoccerPlayersCard">
+            {props.characters.map( (character, index) =>
+                 <SoccerPlayer character={character} index={index} onPlayerClick={props.onPlayerClick} />)}
+        </div>
+    )
+};
+
+
+
+
+
+
+
+
 export default class Board extends React.Component {
 
    
         state = {
                   user: { score: 0 },
-                  characters: mapSortMap( initialChars )
+                  characters: mapSortMap( initialSoccerPlayers )
                 }; 
 
     
-    onCharacterClick = ( index ) =>{
+    onPlayerClick = ( index ) =>{
         if( !this.state.characters[index].clicked ){
             this.setState({
                 characters: mapSortMap( this.state.characters.map( (character, current) =>  {
@@ -114,10 +121,8 @@ export default class Board extends React.Component {
         return (
                   
             <div className="Board">
-                 <Navbar   score={this.state.user.score}   />
-                <CharacterBox 
-                    characters={this.state.characters} 
-                    onCharacterClick={this.onCharacterClick} />
+                <Navbar score={this.state.user.score}  />
+                <SoccerPlayersCard characters={this.state.characters} onPlayerClick={this.onPlayerClick} />
             </div>
         )
     }
